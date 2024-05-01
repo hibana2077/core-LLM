@@ -8,6 +8,16 @@ data_setting:
   each_question_token_length: 100
   each_answer_token_length: 500
 
+job_setting:
+  job_done_notification: False
+  job_done_notification_discord_webhook: "YOUR_DISCORD_WEBHOOK" # leave it "" if you don't want to get notification
+
+huggingface_setting:
+  upload_datasets: False
+  upload_datasets_name: "YOUR_DATASET"
+  upload_datasets_organization: "YOUR_ORGANIZATION" # leave it "" if you don't want to upload to organization repo
+  huggingface_api_token: "YOUR_API_TOKEN" # you can get the token from huggingface
+
 target:
   - "Kāneiolouma Complex"
   - "Italian language"
