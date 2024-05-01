@@ -4,8 +4,6 @@ llm_setting:
   llm_api_token: "YOUR_API_TOKEN" # you can get the token from the provider
 
 data_setting:
-  each_QA_num: 5
-  each_question_token_length: 100
   each_answer_token_length: 500
 
 job_setting:
