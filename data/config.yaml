@@ -1,0 +1,17 @@
+llm_setting:
+  llm_provider: "groq" # now support "groq" and "openai" and "mistral"
+  llm_model: "Llama3-70b-8192" # you can choose any model from the provider
+  llm_api_token: "YOUR_API_TOKEN" # you can get the token from the provider
+
+data_setting:
+  each_QA_num: 5
+  each_question_token_length: 100
+  each_answer_token_length: 500
+
+target:
+  - "Kāneiolouma Complex"
+  - "Italian language"
+  - "Python (programming language)"
+  - "Pancreas"
+  - "Organ (biology)"
+  # you can add more target entities
