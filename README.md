@@ -1,7 +1,7 @@
 # core LLM
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Python/Python.png" alt="Python" width="100" />
+  <img src="https://raw.githubusercontent.com/SAWARATSUKI/ServiceLogos/main/Python/Python.png" alt="Python" width="200" />
 </p>
 
 This repository's purpose is to enhance LLM's capabilities in reading comprehension and key point extraction.
