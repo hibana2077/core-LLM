@@ -2,7 +2,7 @@
 Author: hibana2077 hibana2077@gmaill.com
 Date: 2024-05-01 15:09:23
 LastEditors: hibana2077 hibana2077@gmaill.com
-LastEditTime: 2024-05-02 14:52:16
+LastEditTime: 2024-05-02 15:24:23
 FilePath: /core-LLM/data/gen_data.py
 Description: 
 '''
@@ -94,6 +94,17 @@ llm.temperature = 0
 llm.max_tokens = config["llm_setting"]["llm_max_tokens"]
 
 def gen_data(target:str, data:pd.DataFrame, config:dict):
+    """
+    Generate data for a given target.
+
+    Args:
+        target (str): The target for which data needs to be generated.
+        data (pd.DataFrame): The existing data to which the generated data will be appended.
+        config (dict): Configuration parameters for data generation.
+
+    Returns:
+        pd.DataFrame: The updated data with the generated data appended.
+    """
     print(f"Generating data for {target}")
     docs = WikipediaLoader(query = target,load_max_docs=1).load()
     Q_query = f"""{target} == abstract == {docs[0].page_content}"""
