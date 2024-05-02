@@ -2,7 +2,7 @@
 Author: hibana2077 hibana2077@gmaill.com
 Date: 2024-05-01 15:09:23
 LastEditors: hibana2077 hibana2077@gmaill.com
-LastEditTime: 2024-05-02 15:24:23
+LastEditTime: 2024-05-02 15:53:49
 FilePath: /core-LLM/data/gen_data.py
 Description: 
 '''
@@ -132,10 +132,15 @@ if __name__ == "__main__":
         datasets = pd.read_csv(config["data_setting"]["data_path"])
         targets:List[str] = config["target"]
         new_df = pd.DataFrame(columns=["prompt","chosen","rejected","diffculty","theme","reference"])
+        
+        # main loop
         for target in targets:
             new_df = gen_data(target, new_df, config)
+
+        # save data
         new_df.to_csv(config["data_setting"]["save_data_path"], index=False)
     except Exception as e:
         print(e)
+        # save data if error occurs
         new_df.to_csv(config["data_setting"]["save_data_path"], index=False)
         raise e
