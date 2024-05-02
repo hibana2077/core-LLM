@@ -1,25 +1,23 @@
 llm_setting:
   llm_provider: "groq" # now support "groq" and "openai" and "mistral"
   llm_model: "Llama3-70b-8192" # you can choose any model from the provider
-  llm_api_token: "YOUR_API_TOKEN" # you can get the token from the provider
-
-data_setting:
-  each_answer_token_length: 500
+  llm_api_token: "gsk_" # you can get the token from the provider
+  llm_max_tokens: 1024
 
 job_setting:
   job_done_notification: False
   job_done_notification_discord_webhook: "YOUR_DISCORD_WEBHOOK" # leave it "" if you don't want to get notification
 
-huggingface_setting:
-  upload_datasets: False
-  upload_datasets_name: "YOUR_DATASET"
-  upload_datasets_organization: "YOUR_ORGANIZATION" # leave it "" if you don't want to upload to organization repo
-  huggingface_api_token: "YOUR_API_TOKEN" # you can get the token from huggingface
+data_setting:
+  load_existing_data: True
+  data_path: "./data.csv"
+  save_data: True
+  save_data_path: "./data.csv"
 
 target:
   - "Kāneiolouma Complex"
   - "Italian language"
-  - "Python (programming language)"
-  - "Pancreas"
-  - "Organ (biology)"
+  # - "Python (programming language)"
+  # - "Pancreas"
+  # - "Organ (biology)"
   # you can add more target entities
