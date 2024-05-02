@@ -52,6 +52,8 @@ TBW
 
 ## Demo
 
+![demo](./img/demo.png)
+
 [demo_data](./data/data.csv)
 
 ## License
