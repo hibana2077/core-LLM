@@ -52,7 +52,9 @@ TBW
 
 ## Demo
 
-![demo](./img/demo.png)
+<p align="center">
+  <img src="./img/demo.png" alt="Python" width="500" />
+</p>
 
 [demo_data](./data/data.csv)
 
