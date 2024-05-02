@@ -50,6 +50,10 @@ cat data.csv
 
 TBW
 
+## Demo
+
+[demo_data](./data/data.csv)
+
 ## License
 
 ![MIT](https://img.shields.io/badge/license-MIT-green)
