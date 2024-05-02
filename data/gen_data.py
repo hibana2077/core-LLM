@@ -2,13 +2,14 @@
 Author: hibana2077 hibana2077@gmaill.com
 Date: 2024-05-01 15:09:23
 LastEditors: hibana2077 hibana2077@gmaill.com
-LastEditTime: 2024-05-02 15:53:49
+LastEditTime: 2024-05-02 20:31:40
 FilePath: /core-LLM/data/gen_data.py
 Description: 
 '''
 
 import pandas as pd
 import logging
+import requests
 
 from time import sleep
 from typing import List
@@ -139,6 +140,13 @@ if __name__ == "__main__":
 
         # save data
         new_df.to_csv(config["data_setting"]["save_data_path"], index=False)
+
+        # print success message
+        print("Data generation completed successfully")
+
+        # Job done notification
+        if config["job_setting"]["job_done_notification"]:
+            requests.post(config["job_setting"]["job_done_notification_url"], json={"text": "Data generation completed successfully"})
     except Exception as e:
         print(e)
         # save data if error occurs
